@@ -1,34 +1,33 @@
 # QGIS - Tutorials 
 ## Tutorial 8 - Making a map in QGIS
 
-Fabian Fassnacht
-
-Institute for Geography and Geoecology
-
-KIT—Karlsruhe Institute of Technology
-
-July 21, 2017
 
 **Abstract**
 
-After completing this tutorial you will know how to create basic maps in QGIS with an appropriate legend, a north arrow, a coordinate grid and a scale. Developed with QGIS version - LAS PALMAS 2.18.9
+After completing this tutorial you will know how to create basic maps in QGIS with an appropriate legend, a north arrow, a coordinate grid and a scale. Developed with QGIS version - Bialowieza 3.22.5
 
 ## 1 Preparing the data for the map: Reprojecting and cutting a Shapefile to a desired extent
 In this tutorial we will learn how to create basic maps in QGIS. As a first step
 
-**we again first load the raster dataset “S2_Neapel_sm2.tif” located in the “Datasets/S2” folder and adapt the visualization settings to have a balanced view of all classes by using the channels R=3, G=2, B=1 and loading new max / min values using the “Style”- tab in the properties window. Then we additionally load the “gis.osm_landuse_a_free_1” layer located in the “Datasets/Italy_South_OSM” folder.**
+**we again first load the raster dataset “S2_Neapel_sm2.tif” located in the “Datasets/S2” folder and adapt the visualization settings to have a balanced view of all classes by using the channels R=3, G=2, B=1 and loading new max / min values using the “Symbology”- tab in the properties window. Then we additionally load the “gis.osm_landuse_a_free_1” layer provided in one of the earlier tutorials.**
 
 This will lead to the situation shown in Figure 1.
 
 ![Figure 1: The two loaded datasets.](Fig1_Tut8.png)
 
+**Figure 1: The two loaded datasets.**
+
 For creating the map, we would like the applied datasets to cover the same extent. So as next step, we will clip the Shapefile so that its extent matches the extent of the satellite image. To accomplish this, we will 
 
-**select “Processing” -> “Toolbox” from the main menu in QGIS to open the Processing Toolbox window (in case it is not already open). Then we will type “clip vectors” into the search field of the Processing Toolbox window (marked with “1” in Figure 2) and select the tool “clip vectors by extent” as marked with “2“ in Figure 2. In the new dialogue, we select “gis.osm_landuse_a_free_1” layer as input layer and then press the “...” button marked with “1” in Figure 3. This will open a drop–down menu from which we select the first option “Use layer/canvas extent”. In the newly opened window, we then select the satellite image “S2_Neapel_sm2 [EPSG:32633]”.**
+**select “Processing” -> “Toolbox” from the main menu in QGIS to open the Processing Toolbox window (in case it is not already open). Then we will type “clip vector” into the search field of the Processing Toolbox window (marked with “1” in Figure 2) and select the tool “clip vectors by extent” as marked with “2“ in Figure 2. In the new dialogue, we select “gis.osm_landuse_a_free_1” layer as input layer and then press the “...” button marked with “1” in Figure 3. This will open a drop–down menu from which we select the first option “Use layer/canvas extent”. In the newly opened window, we then select the satellite image “S2_Neapel_sm2 [EPSG:32633]”.**
 
 ![Figure 2: Loading the clip vector tool from the Processing toolbox.](Fig2_Tut8.png)
 
+**Figure 2: Loading the clip vector tool from the Processing toolbox.**
+
 ![Figure 3: The clip tool displays a warning message if the two datasets are not in the same coordinate reference system.](Fig3_Tut8.png)
+
+**Figure 3: The clip tool displays a warning message if the two datasets are not in the same coordinate reference system.**
 
 As you can see in Figure 3 this will lead to an orange warning message that will tell us that the current coordinate reference systems of the two files do not match. As a consequence, we will first have to change the coordinate system of the Shapefile and then clip the re–projected Shapefile. Hence, we will
 
@@ -36,7 +35,11 @@ As you can see in Figure 3 this will lead to an orange warning message that will
 
 ![Figure 4: Opening the reproject layer tool.](Fig4_Tut8.png)
 
+**Figure 4: Opening the reproject layer tool.**
+
 ![Figure 5: Parameterizing the reproject layer tool.](Fig5_Tut8.png)
+
+**Figure 5: Parameterizing the reproject layer tool.**
 
 Now the vector shapefile will be re–projected into the EPSG: 32633 coordinate reference system which is a UTM system. As you can see in the main visualization window of QGIS if you re–arrange the layers in the layer window, the re–projected Shapefile will look exactly the same as the original Shapefile and is also located at the exactly same position. This is because QGIS automatically re–projects datasets in differing coordinate systems if it knows the corresponding projection parameters.
 
