@@ -118,57 +118,82 @@ As next step, we will add a grid displaying the coordinates of the map. To do th
 
 To get a feeling for the multitude of available settings, it is best to play around with the different grid types and frame styles and just have a look how the displayed map changes. What is still missing in your map, are the coordinate themselves. To add these, you have to scroll down a bit further in the “Item properties” tab. Then you will find the option to activate the “Draw coordinates” check–box as marked with “1” in Figure 16. In the same section you will find options to activate and de–activate the coordinates for certain sides of the map (area marked with “2” in Figure 16). Generally, it is sufficient to draw the coordinates for one x and one y axis. Further down, it is possible to define the precision of the coordinate. While it makes sense to give precision with decimals for example when using a geographic coordinate system with latitude and longitude values, it in most cases does not make sense in metric coordinate systems such as UTM as most maps will typically not be resolved in sub-meter resolutions. In the example, the value was therefore set to 0.
 
-![Figure 16: Parameterizing the displayed coordinates.](Fig16_Tut8.png)
+![Figure 14: Parameterizing the displayed coordinates.](Fig16_Tut8.png)
+
+**Figure 14: Parameterizing the displayed coordinates**
 
 Next, we will add a North arrow and a scale bar to our map. We can do this by
 
-**selecting the buttons marked with “1” and “2” in Figure 17. Simply click on of the button and then click within the main visualization section of the print composer. You can later adapt the properties of the North arrow and the scale bar by selecting them and adapting the settings displayed in the “Item Properties” section as done before for the map–item.**
+**selecting the buttons marked with “1” and “2” in Figure 15. Simply click on of the button and then click within the main visualization section of the print composer. You can later adapt the properties of the North arrow and the scale bar by selecting them and adapting the settings displayed in the “Item Properties” section as done before for the map–item.**
 
-![Figure 17: Adding a North arrow and a scale bar.](Fig17_Tut8.png)
+![Figure 15: Adding a North arrow and a scale bar.](Fig17_Tut8.png)
+
+**Figure 15: Adding a North arrow and a scale bar.**
 
 Please be aware, that the North arrow in QGIS is not connected to the geoinformation contained in the data. It basically is just a grapical arrow that you draw in any direction. So please make sure that you use it appropriately.
 
 ## 5 Adding a Legend to the map
+
 We will now have a closer look on how to add and adapt a legend to our map. For adding the legend
 
-**we select the “add legend” button marked with “1” in Figure 18 and then draw a rectangle at the position where we want to locate the Legend as shown in Figure 18.**
+**we select the “add legend” button marked with “1” in Figure 16 and then draw a rectangle at the position where we want to locate the Legend as shown in Figure 16.**
 
-![Figure 18: Adding a legend.](Fig18_Tut8.png)
+![Figure 16: Adding a legend.](Fig18_Tut8.png)
 
-This will lead to the situation shown in Figure 19. As you can see, the basic version of the Legend already looks quite suitable. Nevertheless, we might want to adapt a few points related to the displayed contents and the design. For example, we can see that at the bottom of the legend, there is an extra entry for the satellite image stating “S2_neapel_sm2”. This is not really very informative for a potential user of the map. Furthermore, the sub-title of the Legend currently reads “Clipped (extent)” which also should be changed to a more meaningful information.
+**Figure 16: Adding a legend.**
 
-![Figure 19: After adding the legend.](Fig19_Tut8.png)
+This will lead to the situation shown in Figure 17. As you can see, the basic version of the Legend already looks quite suitable. Nevertheless, we might want to adapt a few points related to the displayed contents and the design. For example, we can see that at the bottom of the legend, there is an extra entry for the satellite image stating “S2_neapel_sm2”. This is not really very informative for a potential user of the map. Furthermore, the sub-title of the Legend currently reads “Clipped (extent)” which also should be changed to a more meaningful information.
+
+![Figure 17: After adding the legend.](Fig17_Tut8.png)
+
+**Figure 17: After adding the legend.**
 
 We will now address these two points by
 
-**first selecting the legend in the main visualization window and then opening the “Item properties” tab. Then we scroll down to the entry “Legend items” marked with “1” in Figure 20. Here we will first of all change the name of the section showing the land–use–classes which is currently named “Clipped extent” (it might differ in your case). We do this by double–clicking the field marked with “2” in Figure 20, this will open die pop–up window marked with “3”. Here, we will now change the title to “Land–use–classes” and confirm with “OK”.**
+**first selecting the legend in the main visualization window and then opening the “Item properties” tab. Then we scroll down to the entry “Legend items” marked with “1” in Figure 18. Here we will first of all change the name of the section showing the land–use–classes which is currently named “Clipped extent” (it might differ in your case). We do this by double–clicking the field marked with “2” in Figure 18, this will open die pop–up window marked with “3”. Here, we will now change the title to “Land–use–classes” and confirm with “OK”.**
 
-![Figure 20: Adapting sub–headings in the legend.](Fig20_Tut8.png)
+![Figure 18: Adapting sub–headings in the legend.](Fig20_Tut8.png)
 
-In 21 you can see that the sub-heading has now changed from “Clipped (extent)” to “Land–Use–Classes” (see red box marked with “1”). Next, we will delete the entry in the legend that was created for the satellite data. To do this, we
+**Figure 19: Adapting sub–headings in the legend.**
 
-**first uncheck the option “Auto update” as marked with “2” in 21. If the “Auto update” function is activated, the legend will always display the legend entries for all layers currently activated in the QGIS project. For manually adapting the legend, it has to be de–activated. Next, we select the entry “S2_Neapel_sm2” (marked with “3”) and then we press the red minus button marked with “4” to drop the corresponding entry from the legend.**
+In Figure 21 you can see that the sub-heading has now changed from “Clipped (extent)” to “Land–Use–Classes” (see red box marked with “1”). Next, we will delete the entry in the legend that was created for the satellite data. To do this, we
+
+**first uncheck the option “Auto update” as marked with “2” in Figure 19. If the “Auto update” function is activated, the legend will always display the legend entries for all layers currently activated in the QGIS project. For manually adapting the legend, it has to be de–activated. Next, we select the entry “S2_Neapel_sm2” (marked with “3”) and then we press the red minus button marked with “4” to drop the corresponding entry from the legend.**
 
 In the same way, you could also manually add an entry to the legend by clicking the plus button marked with “5” which will then open a pop–up window with all all available layers that are currently not included in the Legend. If you scroll a bit further down in the “Item properties” window you will see that there are many further options to adapt the layout of the Legend. You can change the font type, the font size and in how many Columns the legend entries are arranged. Feel free to play around with these options and have a look how they affect the layout of your Legend.
 
-![Figure 21: Dropping and adding items from the Legend.](Fig21_Tut8.png)
+![Figure 19: Dropping and adding items from the Legend.](Fig21_Tut8.png)
+
+**Figure 19: Dropping and adding items from the Legend.**
+
 ## 6 Finalizing the map
+
 We now have a map with the most important properties present. We will now finalize the map by adding some information on the data source, a title, and the applied coordinate reference system. To add a title we will
 
-**use the “Add new label” button marked with “3” in Figure 22. Then we can change the displayed text in the field marked with “1” and increase the font size by clicking the button marked with “2”. After re–arranging the text a bit in the main visualization window, we can reach a situation similar as shown in Figure 22.**
+**use the “Add new label” button marked with “3” in Figure 20. Then we can change the displayed text in the field marked with “1” and increase the font size by clicking the button marked with “2”. After re–arranging the text a bit in the main visualization window, we can reach a situation similar as shown in Figure 20.**
 
-![Figure 22: Adding a title to the map.](Fig22_Tut8.png)
+![Figure 20: Adding a title to the map.](Fig22_Tut8.png)
+
+**Figure 20: Adding a title to the map**
 
 We can now add in the same way the data source and the applied coordinate reference system. There is currently no option in QGIS to do this automatically. You can try to accomplish this on your own to create a map that looks similar as shown in Figure 23.
 
-![Figure 23: The final map.](Fig23_Tut8.png)
+![Figure 21: The final map.](Fig23_Tut8.png)
+
+**Figure 21: The final map.**
 
 ## 7 Exporting the map
 If we are happy with the layout of our map we can now export the map by
 
-**either selecting “Composer” -> “Export as Image” / “Export as PDF” / “Export as SVG” or by clicking the three buttons on the far right of the section marked with “1” in Figure 11.**
+**either selecting “Layout” -> “Export as Image” / “Export as PDF” / “Export as SVG” or by clicking the three buttons on the far right of the section marked with “1” in Figure 11.**
 
 Exporting as image allows you to easily embed the map into a text-document (e.g., Word) while PDF is a good solution if you want to send the map without any further information to somebody. The “SVG” format is a pure vector format which has big advantages if your map only consists of vector files as you can then zoom in the exported map without any quality loss.
 
 ## 8 Some remarks
 This Tutorial only covers the most basic functionalities for creating a map in QGIS. As you have already seen from the many options available in the “Item properties” sections of each item that can be added in the print–composer, there are many more ways to adapt your data to create an informative and eye–pleasing map. It is highly encouraged to try out some of the options on your own to get acquainted with all the possibilities the map composer has to offer.
+
+## Exercise Tutorial 9
+
+Please play around a bit more with the different map options and try to design a map which you find visually pleasing and upload the map to Blackboard to proof that you have finished the Tutorial.
+
+
