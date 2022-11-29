@@ -189,11 +189,10 @@ If we are happy with the layout of our map we can now export the map by
 
 Exporting as image allows you to easily embed the map into a text-document (e.g., Word) while PDF is a good solution if you want to send the map without any further information to somebody. The “SVG” format is a pure vector format which has big advantages if your map only consists of vector files as you can then zoom in the exported map without any quality loss.
 
-## 8 Some remarks
+## 8 Exercise 
+
 This Tutorial only covers the most basic functionalities for creating a map in QGIS. As you have already seen from the many options available in the “Item properties” sections of each item that can be added in the print–composer, there are many more ways to adapt your data to create an informative and eye–pleasing map. It is highly encouraged to try out some of the options on your own to get acquainted with all the possibilities the map composer has to offer.
 
-## Exercise Tutorial 9
-
-Please play around a bit more with the different map options and try to design a map which you find visually pleasing and upload the map to Blackboard to proof that you have finished the Tutorial.
+Please play around a bit more with the different map options and try to design a map which you find visually pleasing and then export the map as pdf and upload the map to Blackboard to proof that you have finished the Tutorial.
 
 
