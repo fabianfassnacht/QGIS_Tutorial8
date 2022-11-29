@@ -29,7 +29,7 @@ For creating the map, we would like the applied datasets to cover the same exten
 
 **Figure 3: Calculating the clip extent from a layer.**
 
-After re–arranging the layers to put the clipped Shapefile on top of the other layers, the main visualization window of QGIS should look as shown in Figure 7. The colours are of course likely to differ. In Figure 7 we can now see that the Shapefile was clipped to the extent of the satellite image.
+After re–arranging the layers to put the clipped Shapefile on top of the other layers, the main visualization window of QGIS should look as shown in Figure 4. The colours are of course likely to differ. In Figure 7 we can now see that the Shapefile was clipped to the extent of the satellite image.
 
 ![Figure 4: The clipped Shapefile on top of the satellite image.](Fig7_Tut8.png)
 
@@ -38,23 +38,35 @@ After re–arranging the layers to put the clipped Shapefile on top of the other
 Be aware that the land-cover layer at the moment is still in the geographic coordinate system (EPSG code: 4326). While this is not absolutely problematic in this tutorial since QGIS is able to reproject the file "on-the-fly" you can still reproject the vector layer to UTM if you prefer to have all data in the same coordinate reference system. You should already be familiar with this process from the last tutorial.
 
 ## 2 Preparing the data for the map: Adapting the visualization settings of the Shapefile
-As a next step, we have to prepare all the contents and visualization settings that we would like to integrate into our final map. In our case, we will display only the clipped and re–projected Shapefile as main information source to create a land–cover map and use the satellite image in the background. As next steps, we will therefore adapt the visualization settings of the Shapefile by selecting a categorized visualization setting in the “Style” tab of the “Properties dialogue”. We then manually adapt the colour of all land–use classes so that they reasonably well match their meaning. For example, it might be a good idea to assign a green colour to vegetation classes. The basic process to accomplish this should already be known from Tutorial 2.
 
-So, as a next step, try to adapt the visualization settings of the Shapefile in a way that the main visualization window of QGIS looks similar as seen in Figure 8.
+As a next step, we have to prepare all the contents and visualization settings that we would like to integrate into our final map. In our case, we will display only the clipped and re–projected Shapefile as main information source to create a land–cover map and use the satellite image in the background. As next steps, we will therefore adapt the visualization settings of the Shapefile by selecting a categorized visualization setting in the “Symbology” tab of the “Properties dialogue”. We then manually adapt the colour of all land–use classes so that they reasonably well match their meaning. For example, it might be a good idea to assign a green colour to vegetation classes. The basic process to accomplish this should already be known from Tutorial 2.
 
-![Figure 8: Situation after adaping the visualization options of the Shapefile containing the land–use–classes.](Fig8_Tut8.png)
+So, as a next step, try to adapt the visualization settings of the Shapefile in a way that the main visualization window of QGIS looks similar as seen in Figure 5.
+
+![Figure 5: Situation after adaping the visualization options of the Shapefile containing the land–use–classes.](Fig8_Tut8.png)
+
+**Figure 5: Situation after adaping the visualization options of the Shapefile containing the land–use–classes.**
+
+
 ## 3 Starting the print composer dialogue
-![Figure 9: Opening the print composer dialogue.](Fig9_Tut8.png)
 
-We are now ready to initiate the preparation of a map. In QGIS all functions to create a map are hidden in the “print composer”-Tool which can be accessed from the main menu of QGIS. We will now try this by
+![Figure 6: Opening the print composer dialogue.](Fig9_Tut8.png)
 
-**selecting “Project” -> “New Print Composer...” from the main menu of QGIS as illustrated in Figure 9. This will first open a pop–up window (Figure 10) which will ask you for the name of your new map. We will enter “map1” here and confirm by clicking “OK”. This will open a new window depicting a completely new graphical user interface as shown in Figure 11.**
+**Figure 6: Opening the print composer dialogue.**
 
-![Figure 10: Entering a name for the new print composer project/map.](Fig10_Tut8.png)
+We are now ready to initiate the preparation of a map. In QGIS all functions to create a map are hidden in the “print Layout”-Tool which can be accessed from the main menu of QGIS. We will now try this by
 
-![Figure 11: Overview over the print composer user interface.](Fig11_Tut8.png)
+**selecting “Project” -> “New Print Layout...” from the main menu of QGIS as illustrated in Figure 9. This will first open a pop–up window (Figure 7) which will ask you for the name of your new map. We will enter “map1” here and confirm by clicking “OK”. This will open a new window depicting a completely new graphical user interface as shown in Figure 8.**
 
-This new graphical user interface provides all functionalities to compose a map based on the geodata displayed in the QGIS project. In Figure 11 an overview over the main sections of the print composer tool is given.
+![Figure 7: Entering a name for the new print layout project/map.](Fig10_Tut8.png)
+
+**Figure 7: Entering a name for the new print layout project/map.**
+
+![Figure 8: Overview over the print composer user interface.](Fig11_Tut8.png)
+
+**Figure 8: Overview over the print composer user interface.**
+
+This new graphical user interface provides all functionalities to compose a map based on the geodata displayed in the QGIS project. In Figure 8 an overview over the main sections of the print composer tool is given.
 
 The area marked with **“1”** provides general tools to start composing a new map, store or duplicate a current map project and save a current project as a template. Furthermore, some options to export the current display to a file are provided.
 
@@ -67,31 +79,42 @@ The tools marked with **“4”** allow to add items to the map including for ex
 The section marked with **“5”** provides additional information for all items that are currently included in the map composer project. To access the options of a item, the item has to selected in the main visualization area of the print composer tool (white area marked with **“6”**).
 
 ## 4 Adding items to the map
+
 We will now start composing our map by first of all adding the current visualization of the QGIS project to the map. We will do this by
 
-**selecting the “add map” button marked with “1” in Figure 12 and then drawing a rectangle in the main visualization area of the map composer tool as shown in Figure 12.**
+**selecting the “add map” button marked with “1” in Figure 9 and then drawing a rectangle in the main visualization area of the map composer tool as shown in Figure 12.**
 
-![Figure 12: Adding a map to the print composer view.](Fig12_Tut8.png)
+![Figure 9: Adding a map to the print composer view.](Fig12_Tut8.png)
 
-This will add the current QGIS project visualization to the map as shown in Figure 13. This map item can now be seen as a “placeholder” that will always show the current visualization of the QGIS project if the view is updated. It will not update itself automatically. In Figure 13 you can see that the actual map content is not fully filling out the frame of the map–item we have just created. We can address this problem by on the one hand side moving the map contents within the map–item frame by using the tool marked with “1” in Figure 13 and on the other hand by adapting the current scale of the map. This can be achieved by first selecting the map–item in the main visualization window and then selecting the “item properties” tab as marked with “2” in Figure 13. Then we can change the scale by changing the number given in the field marked with “4”. The smaller we make this number, the more we will zoom into the map. We can try this by
+**Figure 9: Adding a map to the print composer view.**
+
+This will add the current QGIS project visualization to the map as shown in Figure 10. This map item can now be seen as a “placeholder” that will always show the current visualization of the QGIS project if the view is updated. It will not update itself automatically. In Figure 13 you can see that the actual map content is not fully filling out the frame of the map–item we have just created. We can address this problem by on the one hand side moving the map contents within the map–item frame by using the tool marked with “1” in Figure 10 and on the other hand by adapting the current scale of the map. This can be achieved by first selecting the map–item in the main visualization window and then selecting the “item properties” tab as marked with “2” in Figure 10. Then we can change the scale by changing the number given in the field marked with “4”. The smaller we make this number, the more we will zoom into the map. We can try this by
 
 **changing the current value of around 137.000 to 50.000. After changing the value we have to press the “Update preview” button marked with “3” in Figure 13 to refresh the current view of the map.**
 
-![Figure 13: Adapting the displayed extent of the geodata in the print composer view](Fig13_Tut8.png)
+![Figure 10: Adapting the displayed extent of the geodata in the print composer view](Fig13_Tut8.png)
+
+**Figure 10: Adapting the displayed extent of the geodata in the print composer view**
 
 The **“Update preview”** button has is a quite important tool. You will have to use it always if you change something in the map contents. That is, if you decide to activate or deactivate some of your geodata in the main visualization window of QGIS and you want to see this also in the print–composer view, you will always have to use the “Update preview” button.
 
-The situation after changing the scale to 50.000 is shown in Figure 14. You can see that, as expected, the displayed extent has shrinked notably, but at the same time, the level of detail has increased.
+The situation after changing the scale to 50.000 is shown in Figure 11. You can see that, as expected, the displayed extent has shrinked notably, but at the same time, the level of detail has increased.
 
-![Figure 14: Situation after adapting the scale of the map.](Fig14_Tut8.png)
+![Figure 11: Situation after adapting the scale of the map.](Fig14_Tut8.png)
+
+**Figure 11: Situation after adapting the scale of the map**
 
 As next step, we will add a grid displaying the coordinates of the map. To do this,
 
-**we again first select the map–item in the main visualization window of the map composer, then select the item properties tab as before to change the scale of the map–item. Here, we will scroll down a bit until we reach the section “Grids” marked with the red frame in Figure 15. We open the section and first of all press the green + button (marked with “1” in Figure 15) to add a grid. We can then adapt the properties of the grid using the settings below. In the situation shown in Figure 15 we selected “Frame and annotations only“ as “Grid type”. This is a rather discreet solution as the grid is only depicted outside of the map. You can play around some more with the differing grid types and see which one you prefer. Furthermore, it is important to select the interval at which grid cells or annotations are set. In the given example the x and y intervals were set to 1000 map units, with map units being meter (area marked with “3” in Figure 15). The frame style can be adapted using the area marked with “4”.**
+**we again first select the map–item in the main visualization window of the map composer, then select the item properties tab as before to change the scale of the map–item. Here, we will scroll down a bit until we reach the section “Grids” marked with the red frame in Figure 12. We open the section and first of all press the green + button (marked with “1” in Figure 12) to add a grid. We can then adapt the properties of the grid by clicking the "Modify Grid" button (marked with "2" in Figure 12). In the situation shown in Figure 13 we selected “Frame and annotations only“ as “Grid type”. This is a rather discreet solution as the grid is only depicted outside of the map. You can play around some more with the differing grid types and see which one you prefer. Furthermore, it is important to select the interval at which grid cells or annotations are set. In the given example the x and y intervals were set to 1000 map units, with map units being meter (area marked with “3” in Figure 13). Please be aware that the map units are only meters if the CRS of the project is set to EPSG 32633 (the crs of the Sentinel-2 image). If the project CRS is currently set to EPSG 4326, you might not see a grid at all since then 1000 as interval would mean 1000° and hence there would no coordinate marked at all since the geographic coordinates only range from 0 to 180 degrees. If this would be the case for you, you can adapt the CRS in the map view by clicking the button marked with "5" in Figure 13. The frame style can be adapted using the area marked with “4”.**
 
-![Figure 15: Adding a grid and drawing coordinates around the map.](Fig15a_Tut8.png)
+![Figure 12: Adding a grid and drawing coordinates around the map.](Fig15a_Tut8.png)
 
-![Figure 15: Adding a grid and drawing coordinates around the map.](Fig15b_Tut8.png)
+**Figure 12: Adding a grid and drawing coordinates around the map.**
+
+![Figure 13: Adding a grid and drawing coordinates around the map.](Fig15b_Tut8.png)
+
+**Figure 13: Adding a grid and drawing coordinates around the map.**
 
 To get a feeling for the multitude of available settings, it is best to play around with the different grid types and frame styles and just have a look how the displayed map changes. What is still missing in your map, are the coordinate themselves. To add these, you have to scroll down a bit further in the “Item properties” tab. Then you will find the option to activate the “Draw coordinates” check–box as marked with “1” in Figure 16. In the same section you will find options to activate and de–activate the coordinates for certain sides of the map (area marked with “2” in Figure 16). Generally, it is sufficient to draw the coordinates for one x and one y axis. Further down, it is possible to define the precision of the coordinate. While it makes sense to give precision with decimals for example when using a geographic coordinate system with latitude and longitude values, it in most cases does not make sense in metric coordinate systems such as UTM as most maps will typically not be resolved in sub-meter resolutions. In the example, the value was therefore set to 0.
 
